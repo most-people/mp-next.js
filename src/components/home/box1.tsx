@@ -33,9 +33,13 @@ export default function HomeBox1() {
           </div>
           <div className="number-box">
             <div className="btn">-</div>
-            <input type="number" />
+            <input className="number" defaultValue={1} />
             <div className="btn">+</div>
           </div>
+          <div className="tip">Whitelists of EdgeRunners can mint 1h in advance</div>
+          <Button className="mint" variant="contained">
+            MINT
+          </Button>
         </form>
       </main>
     </div>
