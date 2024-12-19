@@ -4,6 +4,25 @@ import { createTheme } from '@mui/material/styles'
 const darkTheme = createTheme({
   palette: {
     mode: 'dark',
+    primary: {
+      main: '#fff',
+    },
+  },
+  typography: {
+    fontFamily: '"Serif"',
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          fontSize: '21px',
+        },
+        contained: {
+          background: 'linear-gradient(135deg, #2301db, #d307eb)',
+          color: '#fff',
+        },
+      },
+    },
   },
 })
 
