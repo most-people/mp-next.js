@@ -1,8 +1,16 @@
 #page-home {
-  .box1 {
-    min-height: 1445px;
-    background-image: url(/img/home/background.webp);
-    background-size: contain;
-    background-repeat: no-repeat;
+  h1 {
+    font-family: Orbitron;
+    font-weight: bold;
+    font-size: 73px;
+    line-height: 1;
+  }
+  h2 {
+  }
+  h3 {
+    font-family: Orbitron, Orbitron;
+    font-weight: bold;
+    font-size: 31px;
+    line-height: 1;
   }
 }

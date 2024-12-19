@@ -1,10 +1,11 @@
-// import { Button } from '@mui/material'
 import './page.scss'
+
+import HomeBox1 from '@/components/home/box1'
 
 export default function Home() {
   return (
     <div id="page-home">
-      <div className="box1"></div>
+      <HomeBox1 />
     </div>
   )
 }

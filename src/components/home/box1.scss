@@ -1,0 +1,55 @@
+.home-box1 {
+    width: 100%;
+    min-height: 1445px;
+    background-image: url(/img/home/background.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    > main {
+        margin: 0 auto;
+        max-width: 1920px;
+        padding: 0 271px 0 253px;
+
+        > header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 54px;
+            .logo {
+                width: 311px;
+                height: 80px;
+            }
+            .btn-box {
+                display: flex;
+                align-items: center;
+                gap: 14px;
+            }
+        }
+        h1 {
+            margin-top: 129px;
+        }
+        h3 {
+            margin-top: 35px;
+        }
+        form {
+            margin-top: 87px;
+            width: 487px;
+
+            .item {
+                font-family: Serif Medium;
+                font-size: 21px;
+                line-height: 30px;
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 87px;
+                border-bottom: 1px solid #d307eb;
+
+                .right {
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
