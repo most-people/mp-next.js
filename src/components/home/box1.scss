@@ -23,6 +23,9 @@
                 display: flex;
                 align-items: center;
                 gap: 14px;
+                .profile {
+                    min-width: 133px;
+                }
             }
         }
         h1 {

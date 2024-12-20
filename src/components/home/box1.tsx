@@ -1,19 +1,30 @@
 'use client'
 
 import { useState } from 'react'
+import { useNotifications } from '@toolpad/core/useNotifications'
 import './box1.scss'
 import { Button } from '@mui/material'
 
 export default function HomeBox1() {
-  const [number, setNumber] = useState(0)
+  const notifications = useNotifications()
+  const [number, setNumber] = useState(1)
   const numberChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     // 如果需要将输入值转换为数字
     const v = parseInt(event.target.value)
     if (isNaN(v)) {
-      setNumber(0)
+      setNumber(1)
+    } else if (v < 1) {
+      setNumber(1)
     } else {
       setNumber(v)
     }
+  }
+
+  const mint = () => {
+    notifications.show('You are now offline', {
+      severity: 'error',
+      autoHideDuration: 3000,
+    })
   }
 
   return (
@@ -22,8 +33,12 @@ export default function HomeBox1() {
         <header>
           <img className="logo" src="/img/home/logo.webp" alt="logo" />
           <div className="btn-box">
-            <Button variant="outlined">Profile</Button>
-            <Button variant="contained">Connect wallet</Button>
+            <Button className="profile" variant="outlined">
+              Profile
+            </Button>
+            <Button className="connect-wallet" variant="contained">
+              Connect wallet
+            </Button>
           </div>
         </header>
         <h1>Welcome to ER Universe</h1>
@@ -46,7 +61,7 @@ export default function HomeBox1() {
             <div className="right">0.055 ETH</div>
           </div>
           <div className="number-box">
-            <div className="btn" onClick={() => setNumber(number - 1)}>
+            <div className="btn" onClick={() => setNumber(number - 1 <= 1 ? 1 : number - 1)}>
               -
             </div>
             <input className="number" value={number} onChange={numberChange} />
@@ -55,7 +70,7 @@ export default function HomeBox1() {
             </div>
           </div>
           <div className="tip">Whitelists of EdgeRunners can mint 1h in advance</div>
-          <Button className="mint" variant="contained">
+          <Button className="mint" variant="contained" onClick={mint}>
             MINT
           </Button>
         </form>
