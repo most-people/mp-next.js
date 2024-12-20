@@ -1,3 +1,4 @@
+@import "./font.scss";
 /* global.scss */
 :root {
   --background: #010208;
@@ -12,16 +13,19 @@ body {
   background: var(--background);
 }
 
+body,
+input {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Serif", Arial, Helvetica, sans-serif;
+  letter-spacing: 2px;
+  color: var(--color);
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-
-  color: var(--color);
-  font-family: "Serif", Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  letter-spacing: 2px;
 }
 
 a {
@@ -30,7 +34,7 @@ a {
 }
 
 body {
-  /* 滚动条样式 */
+  // 滚动条样式
   &::-webkit-scrollbar {
     width: 6px;
   }
@@ -49,27 +53,20 @@ body {
   &::-webkit-scrollbar-thumb:hover {
     background-color: rgba(255, 255, 255, 0.5); /* 悬停时变亮 */
   }
+
+  // 按钮样式
+  .MuiButton-root {
+    font-family: "Serif";
+    letter-spacing: 2px;
+    border-radius: 0;
+  }
 }
 
-// "Serif"
-@font-face {
-  font-family: "Serif";
-  src: url("/fonts/Serif/Serif-Medium.ttf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Serif";
-  src: url("/fonts/Serif/Serif-Black.ttf") format("opentype");
-  font-weight: 700;
-  font-style: normal;
-}
-
-// Avanti
-@font-face {
-  font-family: Avanti;
-  src: url("/fonts/Avanti/Avanti-Regular.ttf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-}
+// mobile
+// @media (max-width: 1280px) {
+//   body {
+//     // 按钮样式
+//     .MuiButton-root {
+//     }
+//   }
+// }

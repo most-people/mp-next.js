@@ -24,7 +24,7 @@ export default function HomeBox1() {
     enqueueSnackbar('Congratulations! You successfully mint 1 NFT(2/3 NFTs)!', {
       variant: 'success',
     })
-    enqueueSnackbar('Sorry, something went wrong. Please try again later.', { variant: 'error' })
+    // enqueueSnackbar('Sorry, something went wrong. Please try again later.', { variant: 'error' })
   }
   return (
     <div className="home-box1">

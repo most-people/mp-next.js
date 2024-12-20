@@ -1,0 +1,22 @@
+// "Serif"
+@font-face {
+    font-family: "Serif";
+    src: url("/fonts/Serif/Serif-Medium.ttf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Serif";
+    src: url("/fonts/Serif/Serif-Black.ttf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+// Avanti
+@font-face {
+    font-family: Avanti;
+    src: url("/fonts/Avanti/Avanti-Regular.ttf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
