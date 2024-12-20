@@ -30,7 +30,7 @@ export default function HomeBox1() {
   }
 
   const ConnectWallet = (
-    <div id="connect-wallet">
+    <div id="connect-wallet" className="animate__animated animate__flipInX">
       <Button className="wallet">
         <img src="/img/wallet/metamask.webp" alt="metamask" />
         <span>Metamask</span>

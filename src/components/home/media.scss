@@ -7,6 +7,9 @@
     gap: 64px;
     img {
         cursor: pointer;
+        &:hover {
+            animation: rubberBand 1s ease-in-out;
+        }
     }
 }
 
