@@ -53,12 +53,12 @@ export default function HomeBox1() {
           <img className="logo" src="/img/home/logo.webp" alt="logo" />
           <div className="btn-box">
             <Button className="profile" variant="outlined">
-              Profile
+              PROFILE
             </Button>
 
             <MpPopover content={ConnectWallet}>
               <Button className="connect-wallet" variant="contained">
-                Connect wallet
+                CONNECT WALLET
               </Button>
             </MpPopover>
           </div>
@@ -97,6 +97,16 @@ export default function HomeBox1() {
           </Button>
         </form>
       </main>
+      <footer>
+        <div className="rect"></div>
+        <div className="rect-oblique">
+          <span>EdgeRunners</span>
+          <span>EdgeRunners</span>
+          <span>EdgeRunners</span>
+          <span>EdgeRunners</span>
+          <span>EdgeRunners</span>
+        </div>
+      </footer>
     </div>
   )
 }

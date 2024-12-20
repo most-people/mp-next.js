@@ -111,6 +111,35 @@
             }
         }
     }
+    > footer {
+        margin-top: 85px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        .rect {
+            width: 100%;
+            height: 89px;
+            background: linear-gradient(90deg, #d307eb, #2301db);
+            opacity: 0.49;
+        }
+        .rect-oblique {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 42px;
+            text-transform: uppercase;
+            position: absolute;
+            top: 0;
+            left: calc(50% - 55%);
+            width: 110%;
+            height: 79px;
+            background: linear-gradient(90deg, #d307eb, #2301db);
+            transform: rotate(352.5deg);
+            font-family: Orbitron;
+            font-weight: bold;
+            font-size: 47px;
+        }
+    }
 }
 
 #connect-wallet {
