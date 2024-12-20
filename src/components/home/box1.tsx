@@ -4,6 +4,7 @@ import { useState } from 'react'
 import './box1.scss'
 import { Button } from '@mui/material'
 import { useSnackbar } from 'notistack'
+import MpPopover from '@/components/MpPopover'
 
 export default function HomeBox1() {
   const { enqueueSnackbar } = useSnackbar()
@@ -26,6 +27,24 @@ export default function HomeBox1() {
     })
     // enqueueSnackbar('Sorry, something went wrong. Please try again later.', { variant: 'error' })
   }
+
+  const ConnectWallet = (
+    <div id="connect-wallet">
+      <Button className="wallet">
+        <img src="/img/wallet/metamask.webp" alt="metamask" />
+        <span>Metamask</span>
+      </Button>
+      <Button className="wallet">
+        <img src="/img/wallet/coinbase.webp" alt="coinbase" />
+        <span>Coinbase Wallet</span>
+      </Button>
+      <Button className="wallet">
+        <img src="/img/wallet/wallet-connect.webp" alt="wallet-connect" />
+        <span>Wallet Connect</span>
+      </Button>
+    </div>
+  )
+
   return (
     <div className="home-box1">
       <Media />
@@ -36,9 +55,12 @@ export default function HomeBox1() {
             <Button className="profile" variant="outlined">
               Profile
             </Button>
-            <Button className="connect-wallet" variant="contained">
-              Connect wallet
-            </Button>
+
+            <MpPopover content={ConnectWallet}>
+              <Button className="connect-wallet" variant="contained">
+                Connect wallet
+              </Button>
+            </MpPopover>
           </div>
         </header>
         <h1>Welcome to ER Universe</h1>

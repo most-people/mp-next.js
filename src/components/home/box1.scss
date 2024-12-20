@@ -113,6 +113,30 @@
     }
 }
 
+#connect-wallet {
+    margin-top: 9px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.66);
+    .wallet {
+        width: 100%;
+        cursor: pointer;
+        user-select: none;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0 22px;
+        gap: 13px;
+        height: 42px;
+        img {
+            width: 24px;
+        }
+    }
+    .wallet + .wallet {
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+}
+
 // mobile
 @media (max-width: 1024px) {
     .home-box1 {
