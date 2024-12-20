@@ -57,6 +57,7 @@
                 justify-content: center;
                 gap: 7px;
                 .btn {
+                    user-select: none;
                     cursor: pointer;
                     display: flex;
                     align-items: center;
@@ -66,6 +67,7 @@
                     background: linear-gradient(135deg, #d307eb, #2301db);
 
                     font-family: Avanti;
+                    letter-spacing: 0;
                     font-weight: 400;
                     font-size: 25px;
                 }
@@ -78,8 +80,10 @@
                     text-align: center;
 
                     font-family: Avanti;
+                    letter-spacing: 0;
                     font-weight: 400;
                     font-size: 25px;
+                    line-height: 26px;
                 }
             }
             .tip {

@@ -1,7 +1,21 @@
+'use client'
+
+import { useState } from 'react'
 import './box1.scss'
 import { Button } from '@mui/material'
 
 export default function HomeBox1() {
+  const [number, setNumber] = useState(0)
+  const numberChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    // 如果需要将输入值转换为数字
+    const v = parseInt(event.target.value)
+    if (isNaN(v)) {
+      setNumber(0)
+    } else {
+      setNumber(v)
+    }
+  }
+
   return (
     <div className="home-box1">
       <main>
@@ -32,9 +46,13 @@ export default function HomeBox1() {
             <div className="right">0.055 ETH</div>
           </div>
           <div className="number-box">
-            <div className="btn">-</div>
-            <input className="number" defaultValue={1} />
-            <div className="btn">+</div>
+            <div className="btn" onClick={() => setNumber(number - 1)}>
+              -
+            </div>
+            <input className="number" value={number} onChange={numberChange} />
+            <div className="btn" onClick={() => setNumber(number + 1)}>
+              +
+            </div>
           </div>
           <div className="tip">Whitelists of EdgeRunners can mint 1h in advance</div>
           <Button className="mint" variant="contained">

@@ -1,20 +1,16 @@
 #page-home {
-  h1 {
-    font-family: Orbitron;
-    font-weight: bold;
-    font-size: 73px;
-    line-height: 1;
-    letter-spacing: 0;
-    text-transform: uppercase;
-  }
-  h2 {
-  }
+  h1,
   h3 {
     font-family: Orbitron;
     font-weight: bold;
-    font-size: 31px;
     line-height: 1;
     letter-spacing: 0;
     text-transform: uppercase;
+  }
+  h1 {
+    font-size: 73px;
+  }
+  h3 {
+    font-size: 31px;
   }
 }
