@@ -3,7 +3,7 @@ import Media from '@/components/home/media'
 import Marquee from 'react-fast-marquee'
 import { useState } from 'react'
 import './box1.scss'
-import { Button } from '@mui/material'
+import { Button, TextField } from '@mui/material'
 import { useSnackbar } from 'notistack'
 import MpPopover from '@/components/MpPopover'
 
@@ -23,9 +23,6 @@ export default function HomeBox1() {
   }
 
   const mint = () => {
-    // enqueueSnackbar('Congratulations! You successfully mint 1 NFT(2/3 NFTs)!', {
-    //   variant: 'success',
-    // })
     enqueueSnackbar('Sorry, something went wrong. Please try again later.', { variant: 'error' })
   }
 
@@ -84,13 +81,13 @@ export default function HomeBox1() {
             <div className="right">0.055 ETH</div>
           </div>
           <div className="number-box">
-            <div className="btn" onClick={() => setNumber(number - 1 <= 1 ? 1 : number - 1)}>
+            <Button className="btn" onClick={() => setNumber(number - 1 <= 1 ? 1 : number - 1)}>
               -
-            </div>
-            <input className="number" value={number} onChange={numberChange} />
-            <div className="btn" onClick={() => setNumber(number + 1)}>
+            </Button>
+            <TextField className="number" value={number} onChange={numberChange} />
+            <Button className="btn" onClick={() => setNumber(number + 1)}>
               +
-            </div>
+            </Button>
           </div>
           <div className="tip">Whitelists of EdgeRunners can mint 1h in advance</div>
           <Button className="mint" variant="contained" onClick={mint}>

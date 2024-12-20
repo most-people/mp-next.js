@@ -73,27 +73,39 @@
                     align-items: center;
                     justify-content: center;
                     width: 45px;
+                    min-width: 45px;
                     height: 45px;
                     background: linear-gradient(135deg, #d307eb, #2301db);
-
                     font-family: Avanti;
                     letter-spacing: 0;
                     font-weight: 400;
                     font-size: 25px;
                 }
-                input.number {
-                    width: 141px;
-                    height: 45px;
-                    background: transparent;
-                    border: 1px solid #ffffff;
-                    outline: 0;
-                    text-align: center;
-
-                    font-family: Avanti;
-                    letter-spacing: 0;
-                    font-weight: 400;
-                    font-size: 25px;
-                    line-height: 26px;
+                .number {
+                    input {
+                        text-align: center;
+                        font-family: Avanti;
+                        letter-spacing: 0;
+                        font-weight: 400;
+                        font-size: 25px;
+                        line-height: 26px;
+                        width: 141px;
+                        height: 45px;
+                        padding: 0;
+                    }
+                    & .MuiOutlinedInput-root {
+                        fieldset {
+                            // border-radius: 0;
+                            border-width: 1px;
+                            border-color: #ffffff6e; // 默认边框颜色
+                        }
+                        &:hover fieldset {
+                            border-color: #ffffff9d; // hover 时的边框颜色
+                        }
+                        &:focus-within fieldset {
+                            border-color: #ffffffc5; // focus 时的边框颜色
+                        }
+                    }
                 }
             }
             .tip {

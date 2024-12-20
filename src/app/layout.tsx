@@ -1,7 +1,10 @@
 import { Orbitron } from 'next/font/google'
-// 文档 https://mui.com/material-ui/integrations/nextjs/
+// 文档 https://mui.com/material-ui/integrations/nextjs
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter'
+// https://michalsnik.github.io/aos
 import 'aos/dist/aos.css'
+// https://animate.style
+import 'animate.css'
 
 import { ThemeProvider } from '@mui/material/styles'
 import theme from './theme'
