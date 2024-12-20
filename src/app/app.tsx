@@ -1,6 +1,17 @@
 'use client'
-import { NotificationsProvider } from '@toolpad/core/useNotifications'
+import { SnackbarProvider } from 'notistack'
 
 export default function App({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <NotificationsProvider>{children}</NotificationsProvider>
+  return (
+    <SnackbarProvider
+      maxSnack={3}
+      anchorOrigin={{
+        vertical: 'top',
+        horizontal: 'right',
+      }}
+      autoHideDuration={3000}
+    >
+      {children}
+    </SnackbarProvider>
+  )
 }

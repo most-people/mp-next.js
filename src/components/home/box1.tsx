@@ -1,12 +1,12 @@
 'use client'
 
 import { useState } from 'react'
-import { useNotifications } from '@toolpad/core/useNotifications'
 import './box1.scss'
 import { Button } from '@mui/material'
+import { useSnackbar } from 'notistack'
 
 export default function HomeBox1() {
-  const notifications = useNotifications()
+  const { enqueueSnackbar } = useSnackbar()
   const [number, setNumber] = useState(1)
   const numberChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     // 如果需要将输入值转换为数字
@@ -21,12 +21,11 @@ export default function HomeBox1() {
   }
 
   const mint = () => {
-    notifications.show('You are now offline', {
-      severity: 'error',
-      autoHideDuration: 3000,
+    enqueueSnackbar('Congratulations! You successfully mint 1 NFT(2/3 NFTs)!', {
+      variant: 'success',
     })
+    enqueueSnackbar('Sorry, something went wrong. Please try again later.', { variant: 'error' })
   }
-
   return (
     <div className="home-box1">
       <main>
