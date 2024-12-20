@@ -100,11 +100,18 @@ export default function HomeBox1() {
       <footer>
         <div className="rect"></div>
         <div className="rect-oblique">
-          <span>EdgeRunners</span>
-          <span>EdgeRunners</span>
-          <span>EdgeRunners</span>
-          <span>EdgeRunners</span>
-          <span>EdgeRunners</span>
+          <div className="mp-marquee">
+            <div className="marquee" aria-hidden="true">
+              <span>EdgeRunners</span>
+              <span>EdgeRunners</span>
+              <span>EdgeRunners</span>
+              <span>EdgeRunners</span>
+              <span>EdgeRunners</span>
+              <span>EdgeRunners</span>
+              <span>EdgeRunners</span>
+              <span>EdgeRunners</span>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
