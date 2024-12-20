@@ -1,5 +1,6 @@
 'use client'
 import Media from '@/components/home/media'
+import Marquee from 'react-fast-marquee'
 import { useState } from 'react'
 import './box1.scss'
 import { Button } from '@mui/material'
@@ -22,10 +23,10 @@ export default function HomeBox1() {
   }
 
   const mint = () => {
-    enqueueSnackbar('Congratulations! You successfully mint 1 NFT(2/3 NFTs)!', {
-      variant: 'success',
-    })
-    // enqueueSnackbar('Sorry, something went wrong. Please try again later.', { variant: 'error' })
+    // enqueueSnackbar('Congratulations! You successfully mint 1 NFT(2/3 NFTs)!', {
+    //   variant: 'success',
+    // })
+    enqueueSnackbar('Sorry, something went wrong. Please try again later.', { variant: 'error' })
   }
 
   const ConnectWallet = (
@@ -50,8 +51,8 @@ export default function HomeBox1() {
       <Media />
       <main>
         <header>
-          <img className="logo" src="/img/home/logo.webp" alt="logo" />
-          <div className="btn-box">
+          <img data-aos="fade-right" className="logo" src="/img/home/logo.webp" alt="logo" />
+          <div data-aos="fade-left" className="btn-box">
             <Button className="profile" variant="outlined">
               PROFILE
             </Button>
@@ -63,9 +64,9 @@ export default function HomeBox1() {
             </MpPopover>
           </div>
         </header>
-        <h1>Welcome to ER Universe</h1>
-        <h3>Co-create new stories, lifestyles and civilizations…</h3>
-        <form>
+        <h1 data-aos="fade-up">Welcome to ER Universe</h1>
+        <h3 data-aos="zoom-out-down">Co-create new stories, lifestyles and civilizations…</h3>
+        <div data-aos="zoom-out-up" className="form">
           <div className="item">
             <div className="left">Pre-sale</div>
             <div className="right">
@@ -95,23 +96,14 @@ export default function HomeBox1() {
           <Button className="mint" variant="contained" onClick={mint}>
             MINT
           </Button>
-        </form>
+        </div>
       </main>
       <footer>
         <div className="rect"></div>
         <div className="rect-oblique">
-          <div className="mp-marquee">
-            <div className="marquee" aria-hidden="true">
-              <span>EdgeRunners</span>
-              <span>EdgeRunners</span>
-              <span>EdgeRunners</span>
-              <span>EdgeRunners</span>
-              <span>EdgeRunners</span>
-              <span>EdgeRunners</span>
-              <span>EdgeRunners</span>
-              <span>EdgeRunners</span>
-            </div>
-          </div>
+          <Marquee pauseOnHover autoFill>
+            <span className="marquee-item">EdgeRunners</span>
+          </Marquee>
         </div>
       </footer>
     </div>

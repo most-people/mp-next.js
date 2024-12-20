@@ -1,43 +1,6 @@
-@keyframes marquee {
-    0% {
-        transform: translate3d(-25%, 0, 0);
-    }
-
-    100% {
-        transform: translate3d(-50%, 0, 0);
-    }
-}
-
-.mp-marquee {
-    position: relative;
-    overflow: hidden;
-    // mask: linear-gradient(90deg, #0000, #000 5% 95%, #0000);
-
-    .marquee {
-        width: fit-content;
-        display: flex;
-        position: relative;
-        transform: translate3d(-25%, 0, 0);
-        animation: marquee 16s linear infinite running;
-
-        span {
-            font-size: 47px;
-            font-weight: 900;
-            padding: 0 21px;
-            white-space: nowrap;
-        }
-    }
-
-    &:hover {
-        .marquee {
-            animation-play-state: paused;
-        }
-    }
-}
-
 .home-box1 {
     width: 100%;
-    min-height: 1445px;
+    height: 1445px;
     background-image: url("/img/home/background.webp");
     background-size: contain;
     background-repeat: no-repeat;
@@ -78,7 +41,7 @@
         h3 {
             margin-top: 35px;
         }
-        form {
+        .form {
             margin-top: 87px;
             max-width: 487px;
 
@@ -173,6 +136,10 @@
             transform: rotate(352.5deg);
             font-family: Orbitron;
             font-weight: bold;
+            font-size: 47px;
+            .marquee-item {
+                margin: 0 21px;
+            }
         }
     }
 }

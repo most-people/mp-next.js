@@ -1,3 +1,5 @@
+'use client'
+
 import HomeBox1 from '@/components/home/box1'
 
 import './page.scss'

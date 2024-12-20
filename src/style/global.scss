@@ -14,7 +14,9 @@ body {
 }
 
 body,
-input {
+input,
+textarea,
+#notistack-snackbar {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Serif", Arial, Helvetica, sans-serif;
