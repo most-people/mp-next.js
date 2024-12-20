@@ -1,6 +1,6 @@
-import './page.scss'
-
 import HomeBox1 from '@/components/home/box1'
+
+import './page.scss'
 
 export default function Home() {
   return (

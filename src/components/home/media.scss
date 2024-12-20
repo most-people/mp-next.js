@@ -1,0 +1,18 @@
+#media-box {
+    position: absolute;
+    top: 525px;
+    left: 135px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    img {
+        cursor: pointer;
+    }
+}
+
+// mobile
+@media (max-width: 1024px) {
+    #media-box {
+        display: none;
+    }
+}

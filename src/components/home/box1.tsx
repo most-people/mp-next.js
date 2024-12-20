@@ -1,5 +1,5 @@
 'use client'
-
+import Media from '@/components/home/media'
 import { useState } from 'react'
 import './box1.scss'
 import { Button } from '@mui/material'
@@ -28,6 +28,7 @@ export default function HomeBox1() {
   }
   return (
     <div className="home-box1">
+      <Media />
       <main>
         <header>
           <img className="logo" src="/img/home/logo.webp" alt="logo" />

@@ -1,7 +1,7 @@
 .home-box1 {
     width: 100%;
     min-height: 1445px;
-    background-image: url(/img/home/background.webp);
+    background-image: url("/img/home/background.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position-x: right;
@@ -114,7 +114,7 @@
 }
 
 // mobile
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
     .home-box1 {
         > main {
             padding: 0 18px;
